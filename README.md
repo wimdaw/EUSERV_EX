@@ -14,7 +14,7 @@ Please do not abuse this script to cause EUserv to be overloaded and lose connec
 - `locales.py`: (optional) translations for `main.py` log. If this file is not added, the log will be displayed in English.
 - `requirements.txt`: project dependency description file.
 
-## How it works
+## How does it work?
 EUserv set the first threshold from the end of September 2021, that is, the login CAPTCHA (successful verification status maintained for 24 hours), so from now on, we use the API provided by TrueCaptcha (there is a free amount every day) to identify. Not long after, about the beginning of November 2021, EUserv set a second threshold, which is the email PIN verification when renewing. Nearly four months later, on February 28, 2022, EUserv set another threshold, the email PIN verification for each login.
 
 For login CAPTCHA, the API provided by TrueCaptcha is currently used and will be replaced with a locally trained model in the future (see [eu_img](https://github.com/bitsavers/eu_img) for details).
