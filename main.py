@@ -483,9 +483,10 @@ class EUserv(object):
     def __init__(self, customer_ids, passwords):
         self.URL = "https://support.euserv.com/index.iphp"
         self.LOGO_PNG_URL = "https://support.euserv.com/pic/logo_small.png"
+        # lookup latest user-agent: https://www.whatismybrowser.com/guides/the-latest-user-agent/
         self.USER_AGENT = (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/99.0.4844.51 Safari/537.36"
+            "Chrome/100.0.4896.75 Safari/537.36"
         )
         self.customer_ids = customer_ids
         self.passwords = passwords
