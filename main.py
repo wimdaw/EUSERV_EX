@@ -15,6 +15,7 @@ import re
 import json
 import time
 import base64
+import random
 
 from typing import Dict, Tuple
 from email.mime.application import MIMEApplication
@@ -25,6 +26,33 @@ from smtplib import SMTP_SSL, SMTPDataError
 import requests
 from pyairtable import Table, Api
 from bs4 import BeautifulSoup
+
+# User agent rotation
+USER_AGENTS = [
+  (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/100.0.4896.127 Safari/537.36"
+  ),
+  (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/99.0.4844.82 Safari/537.36"
+  ),
+  (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/96.0.4664.93 Safari/537.36"
+  ),
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0", 
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0",
+  (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_3_1) AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/100.0.4896.127 Safari/537.36"
+  ),
+  (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/96.0.4664.55 Safari/537.36"
+  ),
+  "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0"
+]
 
 # Please use one space to separate multiple accounts
 # euserv customer id
@@ -484,10 +512,7 @@ class EUserv(object):
         self.URL = "https://support.euserv.com/index.iphp"
         self.LOGO_PNG_URL = "https://support.euserv.com/pic/logo_small.png"
         # lookup latest user-agent: https://www.whatismybrowser.com/guides/the-latest-user-agent/
-        self.USER_AGENT = (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/100.0.4896.75 Safari/537.36"
-        )
+        self.USER_AGENT = USER_AGENTS[random.randint(0, len(USER_AGENTS) - 1)]
         self.customer_ids = customer_ids
         self.passwords = passwords
 
