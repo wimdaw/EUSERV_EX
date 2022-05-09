@@ -40,7 +40,7 @@ Tips. If you deploy it as a severless function, e.g. AWS Lambda, you need to pac
 ## Setup
 
 ### Environment Variable Setting
-`CUSTOMERIDS`: (required) EUserv customer ids, it supports multiple accounts, must use one space to separate multiple accounts. DO NOT USE your EUserv account email address, USE custom id instead.
+`CUSTOMERIDS`: (required) EUserv customer ids, it supports multiple accounts, must use one space to separate multiple accounts. DO NOT USE your EUserv account email address, USE customer id instead.
 
 `PASSWORDS`: (required) EUserv customer passwords, it supports multiple accounts, must use one space to separate multiple accounts.
 
@@ -239,6 +239,11 @@ International VAT Number.: DE813856317
 
 - Thanks EUserv provides us free IPv6 VPS for learning.
 - Thanks CokeMine & its repository contributors provides us the original *EUserv_extend* script .The internet never forgets, but people do.
+
+## Self-hosted Applications
+1. [x-ui](https://github.com/vaxilu/x-ui): probe.
+2. [exatorrent](https://github.com/varbhat/exatorrent): self-hostable torrent client.
+3. ...
 
 ## Other Implementations
 
