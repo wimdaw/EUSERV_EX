@@ -1,12 +1,14 @@
-# eu_ex
+## Caveats
+
+Please do not abuse this script to cause EUserv to be overloaded and lose connection frequently or to advertise on YouTube and other media for your own benefit. Otherwise I will delete this repository or keep it private. 
+
+For those lovely people, please be careful to identify some so-called one-click scripts or several-in-one scripts that may have mining behavior or even other malicious behaviors. You can review its source code or through online tool [VirusTotal](https://www.virustotal.com).
+
+# About eu_ex
 
 eu_ex means EUserv_extend. A Python script which can help you renew your free EUserv IPv6 VPS.
 
 This script can check the VPS amount in your account automatically and renew the VPS if it can be renewed.
-
-## Caveats
-
-Please do not abuse this script to cause EUserv to be overloaded and lose connection frequently or to advertise on YouTube and other media for your own benefit. Otherwise I will delete this repositery like previous `a-beam-of-light/eu_ex` or keep it private.
 
 ## Project Structure
 
@@ -17,17 +19,18 @@ Please do not abuse this script to cause EUserv to be overloaded and lose connec
 ## How does it work?
 EUserv set the first threshold from the end of September 2021, that is, the login CAPTCHA (successful verification status maintained for 24 hours), so from now on, we use the API provided by TrueCaptcha (there is a free amount every day) to identify. Not long after, about the beginning of November 2021, EUserv set a second threshold, which is the email PIN verification when renewing. Nearly four months later, on February 28, 2022, EUserv set another threshold, the email PIN verification for each login.
 
-For login CAPTCHA, the API provided by TrueCaptcha is currently used and will be replaced with a locally trained model in the future (see [eu_img](https://github.com/bitsavers/eu_img) for details).
+For login CAPTCHA, the API provided by TrueCaptcha is currently used.
+
+It will be replaced with a locally trained model & self-hosted solver (not in public repository) but the dataset generation method is publicly available, it's in [eu_im](https://github.com/bitsavers/eu_im).
 
 For email PIN, two methods are provided.
   1. zapier mail parser + airtable: get email PIN from zapier mail parser via airtable API automatically.
   2. mailparser: convert the parsed data from email into HTTP REST API to get PIN automatically.
 
 Email Parser Services:
-  1. [Zapier Emails Parser](https://parser.zapier.com)
-  2. [Mailparser](https://mailparser.io)
-  3. [Parseur](https://parseur.com)
-  4. https://zapier.com/blog/best-email-parser/
+    1. [Zapier Emails Parser](https://parser.zapier.com)
+    2. [Mailparser](https://mailparser.io)
+    3. [Parseur](https://parseur.com)
 
 ## Dependencies
 

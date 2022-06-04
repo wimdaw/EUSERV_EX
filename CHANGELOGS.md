@@ -4,6 +4,8 @@
 
 EUserv KundenCenter (2.17.1_20220228)
 
+EUserv KundenCenter (2.17.1a_20220415)
+
 - Receive login PIN(6-digits) using zapier parsed data & airtable
   workflow: auto-forward your EUserv PIN email to your zapier mail parser inbox 
   -> parsing PIN via zapier mail parser -> send parsed PIN to airtable.
