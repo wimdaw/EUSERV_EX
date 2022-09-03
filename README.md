@@ -117,7 +117,7 @@ see [ZapierAirtable](./docs/ZapierAirtable.md). This approach is recommended for
 
 `python3 main.py` or
 
-Lambda function handler name: `main.lambda_handler`
+AWS Lambda function handler name: `main.lambda_handler`
 
 ### Final Result
 
