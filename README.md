@@ -1,8 +1,19 @@
+> eu_ex under bitsavers will be archived on December 23, 2022. 
+
 ## Caveats
 
-Please do not abuse this script to cause EUserv to be overloaded and lose connection frequently or to advertise on YouTube and other media for your own benefit. Otherwise I will delete this repository or keep it private. 
+Please do not abuse this script to cause EUserv to be overloaded and lose connection frequently or to advertise on YouTube and other media for your own benefit. 
 
 For those lovely people, please be careful to identify some so-called one-click scripts or several-in-one scripts that may have mining behavior or even other malicious behaviors. You can review its source code or through online tool [VirusTotal](https://www.virustotal.com).
+
+Starting December 1, 2022, EUserv Plan `vServer VS2-free v2.1` will no longer allow up to three machines per account, but will be limited to one machine per account. Or choose to go for the upgrade plan `vServer VS2-cloud v2.12`.
+
+> VS2free is still available without a monthly fee. All users who have not previously paid the one-time setup fee will be required to make a _one-time_ payment of a renewal fee as part of the renewal.
+
+![keep_existing_contract](./docs/imgs/keep_existing_contract.png)
+
+Free plan will be asked for one-time setup fee: 2.00 EUR.
+![keep_existing_contract](./docs/imgs/keep_existing_contract_2.png)
 
 # About eu_ex
 
