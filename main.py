@@ -76,16 +76,16 @@ PASSWORDS = os.environ["PASSWORDS"]
 # }
 # demo userid: arun56
 # demo apikey: wMjXmBIcHcdYqO2RrsVN
-TRUECAPTCHA_USERID = os.environ.get("TRUECAPTCHA_USERID", "euextend")
-TRUECAPTCHA_APIKEY = os.environ.get("TRUECAPTCHA_APIKEY", "deJhWBaqgd6QDN4BqJGf")
+TRUECAPTCHA_USERID = os.environ["TRUECAPTCHA_USERID"]
+TRUECAPTCHA_APIKEY = os.environ["TRUECAPTCHA_APIKEY"]
 
 # Checking CAPTCHA API usage, options: True or False
 CHECK_CAPTCHA_SOLVER_USAGE = True
 
 # options: ZapierAirtable or Mailparser
-LOGIN_PIN_SENDER = "ZapierAirtable"
+LOGIN_PIN_SENDER = "Mailparser"
 # options: ZapierAirtable or Mailparser
-RENEW_PIN_SENDER = "ZapierAirtable"
+RENEW_PIN_SENDER = "Mailparser"
 
 # For getting login PIN from airtable, zapier send email to airtable
 AIRTABLE_API_KEY = os.environ.get("AIRTABLE_API_KEY")
@@ -99,8 +99,8 @@ AIRTABLE_TABLE_NAME_FOR_RENEW = "Renew"
 # 30 Emails/Month, 10 inboxes and unlimited downloads for free.
 # Please use one space to separate multiple mailparser download link ids,
 # in order to correspond to the EUserv customer id.
-MAILPARSER_DL_IDS_FOR_LOGIN = os.environ.get("MAILPARSER_DL_IDS_FOR_LOGIN")
-MAILPARSER_DL_IDS_FOR_RENEW = os.environ.get("MAILPARSER_DL_IDS_FOR_RENEW")
+MAILPARSER_DL_IDS_FOR_LOGIN = os.environ["MAILPARSER_DL_IDS_FOR_LOGIN"]
+MAILPARSER_DL_IDS_FOR_RENEW = os.environ["MAILPARSER_DL_IDS_FOR_RENEW"]
 
 # Waiting time of receiving login PIN, units are seconds.
 WAITING_TIME_OF_LOGIN_PIN = 20
@@ -112,23 +112,23 @@ LOGIN_MAX_RETRY_COUNT = 5
 
 # Telegram Bot Push https://core.telegram.org/bots/api#authorizing-your-bot
 # Obtained via @BotFather application, for example: 1077xxx4424:AAFjv0FcqxxxxxxgEMGfi22B4yh15R5uw
-TG_BOT_TOKEN = ""
+TG_BOT_TOKEN = os.environ["TG_BOT_TOKEN"]
 # User, group or channel ID, for example: 129xxx206
-TG_USER_ID = ""
+TG_USER_ID = os.environ["TG_USER_ID"]
 # Build your own API reverse proxy address for use when the network environment is inaccessible,
 # and keep the default if the network is normal.
 TG_API_HOST = "https://api.telegram.org"
 
 # Email notification via yandex service, you can modify yourself to use other email service notifications.
-RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "")
-YD_EMAIL = os.environ.get("YD_EMAIL", "")
+RECEIVER_EMAIL = os.environ["RECEIVER_EMAIL"]
+YD_EMAIL = os.environ["YD_EMAIL"]
 # yandex mail using third party APP authorization code
-YD_APP_PWD = os.environ.get("YD_APP_PWD", "")
+YD_APP_PWD = os.environ["YD_APP_PWD"]
 
 # Server Chan(Server 酱, name in Chinese) https://sct.ftqq.com
 # Free quota: up to 5 messages per day, cards show only title, maximum 1000 API requests per day, up to 5 messages per minute.
 # Server Chan SENDKEY, no need to push can be ignored
-SERVER_CHAN_SENDKEY = os.environ.get("SERVER_CHAN_SENDKEY", "")
+SERVER_CHAN_SENDKEY = os.environ["SERVER_CHAN_SENDKEY"]
 
 # Magic internet access (optinal)
 # support http(s) proxy via the below approach, 
@@ -225,7 +225,7 @@ def send_mail_by_yandex(
                 "Content-Disposition", "attachment", filename=("gb18030", "", file_name)
             )
             msg.attach(part)
-    s = SMTP_SSL("smtp.yandex.ru", 465)
+    s = SMTP_SSL("smtp.163.com", 465)
     s.login(sender_email, sender_password)
     try:
         s.sendmail(msg["From"], msg["To"], msg.as_string())
