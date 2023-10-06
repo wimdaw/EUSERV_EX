@@ -149,9 +149,9 @@ SERVER_CHAN_SENDKEY = os.environ["SERVER_CHAN_SENDKEY"]
 
 
 # Language Options: en/chs/cht, or leave it blank
-LOG_LANG = "en"
+LOG_LANG = "chs"
 log_lang_options = dict()
-if LOG_LANG not in ["chs", "", None]:
+if LOG_LANG not in ["en", "", None]:
     try:
         import locales
         # Localization
