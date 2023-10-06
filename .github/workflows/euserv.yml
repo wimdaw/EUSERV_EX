@@ -30,12 +30,17 @@ jobs:
           python -m pip install -r requirements.txt
       - name: 'Auto_renew'
         env:
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          SCKEY: ${{ secrets.SCKEY }}
-          msg_from: ${{ secrets.msg_from }}
-          passwd: ${{ secrets.passwd }}
-          msg_to: ${{ secrets.msg_to }}
-          smtp: ${{ secrets.smtp }}
-          port: ${{ secrets.port }}
+          YD_EMAIL: ${{ secrets.YD_EMAIL }}
+          PASSWORDS: ${{ secrets.PASSWORDS }}
+          YD_APP_PWD: ${{ secrets.YD_APP_PWD }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          CUSTOMERIDS: ${{ secrets.CUSTOMERIDS }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+          TRUECAPTCHA_USERID: ${{ secrets.TRUECAPTCHA_USERID }}
+          TRUECAPTCHA_APIKEY: ${{ secrets.TRUECAPTCHA_APIKEY }}
+          SERVER_CHAN_SENDKEY: ${{ secrets.SERVER_CHAN_SENDKEY }}
+          MAILPARSER_DL_IDS_FOR_LOGIN: ${{ secrets.MAILPARSER_DL_IDS_FOR_LOGIN }}
+          MAILPARSER_DL_IDS_FOR_RENEW: ${{ secrets.MAILPARSER_DL_IDS_FOR_RENEW }}
+
         run: python main.py
