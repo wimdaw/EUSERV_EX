@@ -76,8 +76,8 @@ PASSWORDS = os.environ["PASSWORDS"]
 # }
 # demo userid: arun56
 # demo apikey: wMjXmBIcHcdYqO2RrsVN
-TRUECAPTCHA_USERID = os.environ["TRUECAPTCHA_USERID"]
-TRUECAPTCHA_APIKEY = os.environ["TRUECAPTCHA_APIKEY"]
+TRUECAPTCHA_USERID = os.environ.get("TRUECAPTCHA_USERID", "xiaow")
+TRUECAPTCHA_APIKEY = os.environ.get("TRUECAPTCHA_APIKEY", "7E2KEFpx8JbMTcnmOxHr")
 
 # Checking CAPTCHA API usage, options: True or False
 CHECK_CAPTCHA_SOLVER_USAGE = True
