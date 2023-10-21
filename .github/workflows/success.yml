@@ -37,8 +37,6 @@ jobs:
           CUSTOMERIDS: ${{ secrets.CUSTOMERIDS }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
-          TRUECAPTCHA_USERID: ${{ secrets.TRUECAPTCHA_USERID }}
-          TRUECAPTCHA_APIKEY: ${{ secrets.TRUECAPTCHA_APIKEY }}
           SERVER_CHAN_SENDKEY: ${{ secrets.SERVER_CHAN_SENDKEY }}
           MAILPARSER_DL_IDS_FOR_LOGIN: ${{ secrets.MAILPARSER_DL_IDS_FOR_LOGIN }}
           MAILPARSER_DL_IDS_FOR_RENEW: ${{ secrets.MAILPARSER_DL_IDS_FOR_RENEW }}
